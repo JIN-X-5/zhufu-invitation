@@ -16,7 +16,7 @@ const notoSerifTC = Noto_Serif_TC({
 });
 
 export const metadata: Metadata = {
-  title: "| ZHŪ FÙ Wedding Design",
+  title: "苧芙喜帖工作坊 | ZHŪ FÙ Wedding Design",
   description: "現代簡約、有溫度的喜帖、書約與婚禮小物設計。致力於紙張美學與婚禮儀式的感官體現。",
 };
 
