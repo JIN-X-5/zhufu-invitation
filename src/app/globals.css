@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: #FDFBF7;
+  --text-main: #333333;
+  --text-soft: #777777;
+  --accent: #B09B82;
+  --accent-soft: #F2E9E1;
+  --max-width: 1200px;
+  --transition-fast: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme {
+  --color-background: var(--bg-color);
+  --color-foreground: var(--text-main);
+  /* Custom Fonts passed from Layout */
+  --font-serif: var(--font-serif);
+  --font-serif-tc: var(--font-serif-tc);
+}
+
+/* --- Base --- */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Reveal Animation --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Asymmetric Layout Utilities --- */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 120px 40px;
+}
+
+/* --- Glassmorphism --- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
